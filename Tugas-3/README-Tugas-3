@@ -1,1 +1,78 @@
+Proyek ini bertujuan untuk melakukan **unsupervised learning (clustering)** pada data nasabah kartu kredit guna mengidentifikasi pola perilaku pelanggan dan membantu strategi bisnis seperti segmentasi marketing, manajemen risiko, dan retensi pelanggan.
 
+---
+
+## 📌 1. Tujuan Repositori
+- Melakukan preprocessing komprehensif pada dataset kartu kredit.
+- Menghasilkan model clustering yang optimal.
+- Menyediakan visualisasi dan analisis profil tiap cluster.
+- Mempermudah navigasi notebook dan hasil model untuk keperluan laporan / presentasi.
+
+---
+
+## 📊 2. Gambaran Singkat Proyek
+Dataset pelanggan kartu kredit dievaluasi menggunakan beberapa algoritma clustering:
+
+- **K-Means (k=2–10)**
+- **Agglomerative Clustering**
+- **DBSCAN**
+
+Evaluasi dilakukan menggunakan beberapa metrik seperti:
+- Silhouette Score
+- Calinski-Harabasz Index
+- Davies-Bouldin Index
+
+Selain itu dilakukan:
+- Imputasi (median)  
+- Outlier capping (IQR)  
+- Scaling (RobustScaler)  
+- Power transformation (Yeo-Johnson)  
+- PCA untuk reduksi dimensi dan visualisasi  
+
+---
+
+## 🧪 3. Hasil Model dan Evaluasi
+### **Model terbaik: K-Means dengan k = 2**
+- **Silhouette:** 0.2608  
+- **CH Index:** 3375.78  
+- **DB Index:** 1.4967  
+
+### **Ringkasan Cluster**
+#### **Cluster 0 – High Balance & Cash Advance Users**
+- Balance tinggi  
+- Cash advance besar dan sering  
+- Minimum payment tinggi  
+- Aktivitas pembelian rendah  
+- Risiko finansial lebih tinggi  
+
+#### **Cluster 1 – Active Purchasers with High Credit Limit**
+- Purchase tinggi  
+- One-off & installment purchases tinggi  
+- Credit limit besar  
+- Cash advance rendah  
+- Segmen stabil & profitable  
+
+Detail profil cluster tersedia di file:
+- `cluster_profile_mean.csv`
+- `cluster_profile_median.csv`
+
+Hasil cluster final ada di:
+- `clustering_results_final.csv`
+
+---
+4. Navigasi 
+Drive Saya/
+├── ML/
+│   ├── clusteringmidterm.csv              # Dataset asli
+│   └── clustering_results_final.csv       # Hasil clustering
+│
+└── Colab Notebooks/            
+    ├── UTS_3_Perbaikan clustering.ipynb   # Notebook program clustering kamu
+    
+
+
+
+## 👤 5. Identitas
+- **Nama:** Eggy Alfan Ananta  
+- **Kelas:** _TK4602_  
+- **NIM:** _1103223194_  
