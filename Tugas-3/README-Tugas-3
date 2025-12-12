@@ -61,6 +61,15 @@ Hasil cluster final ada di:
 
 ---
 4. Navigasi 
+### Pada Google Colab:
+1. Upload notebook atau buka melalui Drive  
+2. Mount Google Drive:
+   ```python
+   from google.colab import drive
+   drive.mount('/content/drive')
+Pastikan folder dataset:
+
+/content/drive/MyDrive/ML/
 Drive Saya/
 ├── ML/
 │   ├── clusteringmidterm.csv              # Dataset asli
@@ -68,6 +77,8 @@ Drive Saya/
 │
 └── Colab Notebooks/            
     ├── UTS_3_Perbaikan clustering.ipynb   # Notebook program clustering kamu
+4. Jalankan cell satu per satu (pipeline modular & aman RAM)
+5. File submission otomatis tersimpan ke: /content/drive/MyDrive/ML/
     
 
 
