@@ -91,13 +91,29 @@ Metode ini terbukti memberikan OOF AUC sangat tinggi.
 
 ---
 ## 4. Navigasi 
+### Pada Google Colab:
+1. Upload notebook atau buka melalui Drive  
+2. Mount Google Drive:
+   ```python
+   from google.colab import drive
+   drive.mount('/content/drive')
+Pastikan folder dataset:
 
-
-
+/content/drive/MyDrive/ML/.......
+Drive Saya/
+├── ML/
+│   ├── test_transaction.csv              # Dataset asli
+|   |__ train_transaction.csv              # Dataset asli
+│   └── submission_lgb_stacked.csv       # Hasil 
+│
+└── Colab Notebooks/            
+    ├── UTS_1_Perbaikan_Transaction.ipynb   # Notebook program transaction kamu
+4. Jalankan cell satu per satu 
+5. File submission otomatis tersimpan ke: /content/drive/MyDrive/ML/
 
 
 ### 5. Identitas
-Nama : Eggy Alfan Ananta
-Kelas : TK4602
-NIM  : 1103223194
+##Nama : Eggy Alfan Ananta
+##Kelas : TK4602
+##NIM  : 1103223194
 
