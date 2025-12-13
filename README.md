@@ -1,1 +1,1 @@
-# Semua Masih Akan Diperbaiki 
+# Semua sudah diperbaiki 
