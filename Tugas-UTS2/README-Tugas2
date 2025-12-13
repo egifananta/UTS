@@ -1,1 +1,89 @@
 
+## 1. Tujuan Repositori
+Tujuan utama proyek ini adalah membangun **pipeline regresi end-to-end** untuk memprediksi **tahun rilis lagu** berdasarkan **fitur numerik audio** menggunakan pendekatan **Machine Learning dan Deep Learning**.
+
+---
+
+## 2. Gambaran Singkat Proyek
+Pada proyek ini, dilakukan eksperimen regresi menggunakan dataset audio musik yang berisi:
+
+- **515.345 data lagu**
+- **90 fitur numerik audio**
+- **1 target kontinu** (tahun rilis lagu)
+
+Pipeline yang dibangun mencakup:
+- Data loading dan preprocessing
+- Feature scaling
+- Training beberapa model regresi
+- Evaluasi performa model
+- Perbandingan hasil dan interpretasi
+
+---
+
+## 3.   Model yang Digunakan
+Dalam proyek ini digunakan tiga pendekatan utama:
+
+### A. Linear Regression (Baseline)
+- Digunakan sebagai model dasar
+- Mudah diinterpretasikan
+- Mengasumsikan hubungan linear antar fitur
+
+### 2. XGBoost Regressor
+- Model ensemble berbasis gradient boosting
+- Sangat efektif untuk data tabular
+- Mampu menangkap hubungan non-linear antar fitur
+- Menjadi **model terbaik** dalam eksperimen ini
+
+### 3. Deep Learning (MLP)
+- Multilayer Perceptron (Neural Network)
+- Menggunakan regularisasi (Dropout & EarlyStopping)
+- Digunakan sebagai pembanding pendekatan Deep Learning
+
+---
+
+## Hasil Evaluasi Model
+Evaluasi dilakukan menggunakan metrik regresi standar:
+- **RMSE (Root Mean Squared Error)**
+- **MAE (Mean Absolute Error)**
+- **R² Score**
+
+| Model               | RMSE ↓ | R² ↑ |
+|---------------------|--------|------|
+| Linear Regression   |  9.52  | 0.24 |
+| **XGBoost**         | **8.79** |**0.35**|
+| Deep Learning (MLP) | 15.75  | -1.08 |
+
+**XGBoost memberikan performa terbaik** dibandingkan model lainnya.
+
+---
+
+## Kenapa Hasil Model Tidak Sangat Tinggi?
+Nilai R² yang tidak terlalu tinggi **bukan merupakan kesalahan implementasi**, melainkan disebabkan oleh karakteristik dataset:
+
+1. **Dataset bersifat noisy**
+   - Fitur audio tidak sepenuhnya merepresentasikan tahun rilis lagu
+   - Banyak lagu lintas tahun memiliki karakteristik audio yang mirip
+
+2. **Data tabular kurang ideal untuk Deep Learning**
+   - Neural Network lebih unggul pada data terstruktur seperti gambar, audio mentah, atau teks
+   - Untuk data tabular statis, model tree-based (XGBoost) lebih efektif
+
+3. **Target tahun rilis memiliki batas informasi**
+   - Banyak faktor eksternal (tren musik, budaya, teknologi produksi) tidak tercakup dalam data
+
+Oleh karena itu, **R² ≈ 0.35 sudah termasuk wajar dan realistis** untuk kasus prediksi tahun lagu berbasis fitur audio.
+
+## Kesimpulan
+- Pipeline end-to-end regresi berhasil dibangun
+- XGBoost terbukti menjadi model paling optimal
+- Deep Learning digunakan sebagai eksperimen tambahan
+- Hasil menunjukkan bahwa **model ensemble lebih cocok untuk data tabular audio**
+
+---
+## 4. Navigasi Drive
+
+
+## 5. Identitas Mahasiswa
+**Nama**  :  Eggy Alfan Ananta
+**Kelas** : _TK4602_  
+**NIM**   : _1103223194_  
