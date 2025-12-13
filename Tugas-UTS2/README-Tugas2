@@ -81,7 +81,29 @@ Oleh karena itu, **R² ≈ 0.35 sudah termasuk wajar dan realistis** untuk kasus
 
 ---
 ## 4. Navigasi Drive
+### Pada Google Colab:
+1. Upload notebook atau buka melalui Drive  
+2. Mount Google Drive:
+   ```python
+   from google.colab import drive
+   drive.mount('/content/drive')
+3. Pastikan folder dataset:
 
+/content/drive/MyDrive/ML/
+Drive Saya/
+├── ML/
+│   ├── midterm-regresi-dataset.csv        # Dataset asli
+│   
+└── Colab Notebooks/            
+    ├── UTS_2_Perbaikan_Regresi.ipynb   # Notebook program regresi kamu
+4. Jalankan cell satu per satu
+Notebook disusun secara pipeline end-to-end
+Aman terhadap penggunaan RAM
+Tidak memerlukan Random Forest (dihilangkan karena runtime lama)
+
+5. Hasil dan evaluasi
+Output evaluasi model (RMSE, MAE, R²) langsung ditampilkan di notebook
+Tidak ada file tambahan yang perlu diunduh manual
 
 ## 5. Identitas Mahasiswa
 **Nama**  :  Eggy Alfan Ananta
